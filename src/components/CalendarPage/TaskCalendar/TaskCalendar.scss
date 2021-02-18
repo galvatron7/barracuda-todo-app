@@ -1,0 +1,23 @@
+.task-calendar {
+  grid-area: task-calendar;
+  height: 100%;
+  height: 250px;
+  .task-header {
+    padding:5px 5px;
+    color:white;
+    background:$leaf-green;
+    h3 {
+      margin:0;
+    }
+  }
+  .active-task-calendar {
+    .react-calendar__tile--active{
+      background: $leaf-green !important;
+    }
+  }
+  .task-done {
+    .react-calendar__tile--active{
+      background: palevioletred !important;
+    }
+  }
+}

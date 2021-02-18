@@ -1,0 +1,88 @@
+.task-list {
+  grid-area: task-list;
+  height: 100%;
+  min-height: 350px;
+  background:white;
+
+  .task-header {
+    padding:5px 5px;
+    color:white;
+    background:$leaf-green;
+    h3 {
+      margin:0;
+    }
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+    li {
+      padding: 10px 1.4em 10px 20px;
+      font-size: 0.9em;
+      list-style: none;
+      box-sizing: border-box;
+      position:relative;
+
+      .task-item {
+        margin:5px 0;
+        display:grid;
+        grid-template-columns: 1fr auto;
+        grid-column-gap:20px;
+        grid-template-areas:
+                "task-list-info task-actions";
+
+        .task-list-info {
+          grid-area:task-list-info;
+          span {
+            margin-left: 5px;
+            padding: 8px;
+            display: inline-block;
+            box-sizing: border-box;
+          }
+        }
+        .task-actions {
+          grid-area:task-actions;
+          .cpt-chk {
+            display: inline-block;
+          }
+          .edit-btn {
+            margin-left: 15px;
+            grid-area:save-btn;
+            padding: 8px;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: #44afee;
+            border-radius: 3px;
+            color: white;
+            &.disabled-btn {
+              background-color: grey;
+            }
+          }
+          .delete-btn {
+            margin-left: 15px;
+            grid-area:save-btn;
+            padding: 8px;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: #b42626;
+            border-radius: 3px;
+            color: white;
+            &.disabled-btn {
+              background-color: grey;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even){
+        background-color: rgba(99,165,127,0.3);
+      }
+
+      &.task-done {
+        background-color: palevioletred !important;
+      }
+    }
+  }
+}

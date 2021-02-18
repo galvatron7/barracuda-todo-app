@@ -1,0 +1,84 @@
+.entry-container {
+  grid-area: entry-container;
+  min-height: 30px;
+  box-sizing: border-box;
+  background-color:$leaf-green;
+
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  display:grid;
+  grid-template-columns: 1fr auto auto;
+  grid-column-gap:15px;
+  grid-template-areas:
+          "task-form-grp task-date-cluster action-btns";
+
+  &.edit-mode{
+    background-color:lightyellow;
+  }
+
+  .task-form-grp {
+    grid-area: task-form-grp;
+    input, label {
+      display: inline-block;
+    }
+    input {
+      margin-left:3px;
+      grid-area:search-npt;
+      padding: 8px;
+      display: inline-block;
+      border: 1px solid $text-grey;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .form-npt {
+      width: 100%;
+      grid-area:task-form-npt;
+      padding: 8px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid $text-grey;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+  }
+
+  .task-date-cluster {
+    grid-area:task-date-cluster;
+    select, label {
+      display: inline-block;
+      margin:5px;
+    }
+    .selectr {
+      padding: 8px;
+      margin:0 5px;
+      display: inline-block;
+      border: 1px solid $text-grey;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+  }
+  .action-btns{
+    grid-area:action-btns;
+    .save-btn {
+       margin-left: 0px;
+       display: inline-block;
+       grid-area:save-btn;
+       padding: 8px;
+       box-sizing: border-box;
+       background-color: $text-grey;
+       border-radius: 3px;
+       color: white;
+     }
+    .cancel-btn {
+      margin-left: 10px;
+      display: inline-block;
+      grid-area:cancel-btn;
+      padding: 8px;
+      box-sizing: border-box;
+      background-color: #b42626;
+      border-radius: 3px;
+      color: white;
+    }
+  }
+}
