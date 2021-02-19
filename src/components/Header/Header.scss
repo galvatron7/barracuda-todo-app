@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     display:grid;
-    grid-template-columns: auto 1fr 300px;
+    grid-template-columns: auto 1fr 30px;
     grid-column-gap:20px;
     grid-template-areas: "logo search nav";
 
@@ -55,21 +55,17 @@
       display: inline-block;
       list-style: none;
       grid-area:nav;
-      li {
-        display: inline-block;
-        padding: 0 1.4em 0 0;
-        font-size: 0.9em;
-        a {
-          text-decoration: none;
-          color: white;
-          background-color: transparent;
-        }
-        a.active {
-          color: $header-blue;
-          font-weight: 300;
-        }
-        a:hover {
-          color: $header-blue;
+      ul{
+        padding:0;
+        margin:0;
+        li {
+          display: inline-block;
+          padding: 0 1.4em 0 0;
+          font-size: 0.9em;
+          svg {
+            font-size: 24px;
+            color: $text-grey;
+          }
         }
       }
     }
