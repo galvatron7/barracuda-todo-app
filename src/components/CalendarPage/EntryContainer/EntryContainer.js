@@ -28,12 +28,16 @@ const EntryContainer = ({save, taskToEdit, replaceTask}) => {
     }
 
     function onSave(){
-        save({
-            id:null,
-            title: itemName,
-            endDate: moment(actionDate).format('MM/DD/YYYY'),
-            isCompleted: taskToEdit?.isCompleted
-        })
+        if(itemName){
+            save({
+                id:null,
+                title: itemName,
+                endDate: moment(actionDate).format('MM/DD/YYYY'),
+                isCompleted: (taskToEdit?.isCompleted)?
+                    taskToEdit?.isCompleted
+                    :false
+            })
+        }
     }
 
     function onCancel(){
