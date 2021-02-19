@@ -1,12 +1,11 @@
 import './App.scss';
-import React,{useState, useEffect} from "react";
+import React,{useState} from "react";
 import Header from "./components/Header/Header";
 import CalendarPage from "./components/CalendarPage/CalendarPage";
 import Tasks from "./data";
 
 function App() {
   const [initialList, setList] = useState(Tasks);
-
 
   return (
     <div className="app">

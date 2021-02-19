@@ -77,7 +77,7 @@ const EntryContainer = ({save, taskToEdit, replaceTask}) => {
                     {
                         (inEditMode)?
                         <a onClick={onEdit}>Edit</a>:
-                            <a onClick={onSave}>Save</a>
+                        <a onClick={onSave}>Save</a>
                     }
                 </div>
                 {

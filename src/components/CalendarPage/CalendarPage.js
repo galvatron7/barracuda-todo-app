@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import TaskList from "./TaskList/TaskList";
 import EntryContainer from "./EntryContainer/EntryContainer";
 import TaskCalendar from "./TaskCalendar/TaskCalendar";
@@ -8,7 +8,6 @@ const CalendarPage = ({startingTasks}) => {
     const [tasks, setTasks] = useState(startingTasks);
     const [selected, setSelected] = useState(null);
     const [taskToEdit, setTaskToEdit] = useState(null);
-    console.log(startingTasks);
     function onSave(newTask){
         newTask.id = tasks.length;
         setTasks([...tasks, newTask]);
@@ -31,9 +30,7 @@ const CalendarPage = ({startingTasks}) => {
         },[]);
         setTasks(newTasks);
     }
-    function clearEditMode(){
 
-    }
     function onTaskSelected(task){
         setSelected(task);
     }
@@ -55,7 +52,7 @@ const CalendarPage = ({startingTasks}) => {
                      deleteTask={onDelete}
                      selectTask={onTaskSelected}
                      toggleComplete={completeTodo}
-                      />
+           />
            <TaskCalendar selectedTask={selected} />
            <TaskDetails selectedTask={selected} />
         </div>
