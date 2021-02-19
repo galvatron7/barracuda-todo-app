@@ -40,6 +40,14 @@
             padding: 8px;
             display: inline-block;
             box-sizing: border-box;
+            &.task-title {
+              width:200px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: inline-block;
+              vertical-align: middle;
+            }
           }
         }
         .task-actions {

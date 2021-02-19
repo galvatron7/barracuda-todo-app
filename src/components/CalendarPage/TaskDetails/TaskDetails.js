@@ -1,8 +1,6 @@
-import React,{useEffect,useState} from "react";
+import React,{useState} from "react";
 
 const TaskDetails = ({selectedTask}) => {
-
-    const [currTask, setCurrTask] = useState(selectedTask);
 
     return(
         <div className="task-details">

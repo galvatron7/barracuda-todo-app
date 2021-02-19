@@ -1,15 +1,14 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import TaskList from "./TaskList/TaskList";
 import EntryContainer from "./EntryContainer/EntryContainer";
 import TaskCalendar from "./TaskCalendar/TaskCalendar";
 import TaskDetails from "./TaskDetails/TaskDetails";
-import Tasks from "../../data";
 
-const CalendarPage = (props) => {
-    const initialTasks = Tasks;
-    const [tasks, setTasks] = useState(initialTasks);
+const CalendarPage = ({startingTasks}) => {
+    const [tasks, setTasks] = useState(startingTasks);
     const [selected, setSelected] = useState(null);
     const [taskToEdit, setTaskToEdit] = useState(null);
+    console.log(startingTasks);
     function onSave(newTask){
         newTask.id = tasks.length;
         setTasks([...tasks, newTask]);
@@ -47,7 +46,10 @@ const CalendarPage = (props) => {
 
     return (
         <div className="calendar-page container">
-           <EntryContainer save={onSave} taskToEdit={taskToEdit} replaceTask={replaceTask}/>
+           <EntryContainer
+               save={onSave}
+               taskToEdit={taskToEdit}
+               replaceTask={replaceTask}/>
            <TaskList tasks={tasks}
                      editTask={onEdit}
                      deleteTask={onDelete}

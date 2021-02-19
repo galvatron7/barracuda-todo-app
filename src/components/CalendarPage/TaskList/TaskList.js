@@ -34,7 +34,7 @@ const TaskList = (props) => {
                             <div className="task-item">
                                 <div
                                     className="task-list-info" onClick={(e) => handleClick(e, task)}>
-                                    <span style={{ textDecoration: task.isCompleted ? "line-through" : "" }}>Task: {task.title}</span>
+                                    <span className="task-title" style={{ textDecoration: task.isCompleted ? "line-through" : "" }}>Task: {task.title}</span>
                                     <span style={{ textDecoration: task.isCompleted ? "line-through" : "" }}>End date:{task.endDate}</span>
                                 </div>
                                 <div className="task-actions">

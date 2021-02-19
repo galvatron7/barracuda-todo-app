@@ -1,20 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Header = (props) => {
 
+    const [searchText, setSearchText] = useState("");
     const goTo = (pageIndex) => {
 
     };
 
     const menu = [{
-        label:"Calendar",
-        action: () => {goTo(1)}
-    }, {
-        label:"Form",
-        action: () => {goTo(2)}
-    }, {
         label:"Search",
-        action: () => {goTo(3)}
+        image: () => {goTo(3)}
     }];
 
     return (
@@ -23,17 +20,14 @@ const Header = (props) => {
                 <div className="logo">
                     <a href="#" className="brand">Todo App</a>
                 </div>
-                <div className="search">
-                    <input type="input" className="search-npt" placeholder="Search for todo item..."/>
-                    <div className="search-btn">
-                        <span href="#">Search</span>
-                    </div>
-                </div>
+                <div className="search"></div>
                 <nav className="nav">
                     <ul>
                         {
                             menu.map((item, idx) =>
-                                <li key={idx}><a onClick={() => item.action()} href="#">{item.label}</a></li>
+                                <li key={idx}>
+                                    <FontAwesomeIcon icon={faUser} />
+                                </li>
                             )
                         }
                     </ul>
