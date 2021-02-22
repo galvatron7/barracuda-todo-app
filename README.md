@@ -12,7 +12,8 @@
   1. To show the actual tasks inside the calendar similar to google calendar.
   1. To send alerts to the user when a due date is approaching.
   2. To have a proper login for multiple users.
-  3. To have plugins to add tasks from other calendar systems... ie.(Google Calendar)
+  3. Convert system to Redux for scailability.
+  4. To have plugins to add tasks from other calendar systems... ie.(Google Calendar)
 
 
 # Getting Started with this app
