@@ -7,11 +7,6 @@ import Tasks from "./data";
 function App() {
   const [initialList, setList] = useState(JSON.parse(localStorage.getItem("tasks")) || Tasks);
 
-  // useEffect(() => {
-  //   const parsedTasks = JSON.parse(localStorage.getItem("tasks") || initialList);
-  //   setList(parsedTasks)
-  // }, []);
-
   return (
     <div className="app">
       <Header></Header>
