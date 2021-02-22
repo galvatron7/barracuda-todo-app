@@ -13,8 +13,9 @@
   1. To send alerts to the user when a due date is approaching.
   2. To have a proper login for multiple users.
   3. Convert system to Redux for scailability.
-  4. Save to a real backend instead of to localstorage.
-  5. To have plugins to add tasks from other calendar systems... ie.(Google Calendar)
+  4. When user clicks to delete a task a confirmation message is shown to the user first.
+  5. Save to a real backend instead of to localstorage.
+  6. To have plugins to add tasks from other calendar systems... ie.(Google Calendar)
 
 
 # Getting Started with this app
